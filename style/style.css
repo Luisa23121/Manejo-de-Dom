@@ -1,0 +1,140 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    padding: 20px; 
+}
+
+
+section {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+#ejercicio1 {
+    background-color: #A7C7E7;
+}
+
+
+
+#input1 {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    width: 250px;     
+}
+
+#boton1 {
+    background-color: #2A5C8C;  
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;   
+}
+
+
+
+#ejercicio2 {
+  background-color: #B8D8F1; 
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+#contador {
+  font-size: 40px;
+  color: #2A5C8C;  
+  margin: 15px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+#botonMas,
+#botonMenos,
+#borrar {
+  background-color: #2A5C8C;   
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin: 5px;
+}
+
+
+
+#ejercicio3 {
+  background-color: #D9EAFB; 
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+#input2 {
+  display: block;               
+  margin: 0 auto 10px auto;     
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  width: 250px;
+  text-align: center;          
+  color: #2A5C8C;               
+}
+
+
+#productosContador {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #2A5C8C;
+  margin-bottom: 15px;
+}
+
+
+#productosContenedor {
+  text-align: center;
+}
+
+
+.producto {
+  display: inline-block;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 150px;
+  margin: 8px;
+  text-align: center;
+}
+
+
+.producto button {
+  background-color: #2A5C8C;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  margin-top: 8px;
+}
+

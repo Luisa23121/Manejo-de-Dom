@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Taller: Manejo del DOM</title>
+
+    
+    <link rel="stylesheet" href="./style/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Manejo del DOM - Taller</h1>
+
+    <!-- Ejercicio 1 -->
+    <section id="ejercicio1">
+        <h2>Ejercicio 1 — Lista de tareas</h2>
+        <input id="input1" type="text" placeholder="Escribe una tarea..." />
+        <button id="boton1">Agregar tarea</button>
+        <p id="error"></p>
+        <ul id="lista1"></ul>
+    </section>
+
+<!-- Ejercicio 2 -->
+    <section id="ejercicio2">
+        <h2>Ejercicio 2 — Contador interactivo</h2>
+        <h2 id="contador">0</h2>
+        <button id="botonMas">+</button>
+        <button id="botonMenos">−</button>
+        <button id="borrar">Borrar</button>
+    </section>
+
+    <!-- Ejercicio 3 -->
+    <section id="ejercicio3">
+        <h2>Ejercicio 3 — Catálogo dinámico</h2>
+        <input id="input2" type="text" placeholder="Buscar producto por nombre..." />
+        <div id="productosContador">
+        Agregados al carrito: <span id="carritoContar">0</span>
+        </div>
+        <div id="productosContenedor"></div>
+        <p id="noCoincide">No hay coincidencias.</p>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
