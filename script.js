@@ -6,22 +6,29 @@ const boton = document.getElementById("boton1");
 const lista = document.getElementById("lista1");
 const error = document.getElementById("error");
 
-
 boton.addEventListener("click", () => {
-  const texto = input.value.trim(); 
-
+  const texto = input.value.trim();
 
   if (texto === "") {
     error.textContent = "Por favor escribe una tarea.";
-    return; 
+    return;
   }
 
-  
   error.textContent = "";
 
   
   const nuevaTarea = document.createElement("li");
   nuevaTarea.textContent = texto;
+
+  
+  nuevaTarea.addEventListener("click", () => {
+    nuevaTarea.classList.toggle("completada");
+  });
+
+  
+  nuevaTarea.addEventListener("dblclick", () => {
+    nuevaTarea.remove();
+  });
 
   
   lista.appendChild(nuevaTarea);
@@ -31,7 +38,11 @@ boton.addEventListener("click", () => {
 });
 
 
+
+
+
 /* ejercicio 2 */
+
 
 const botonMas = document.getElementById("botonMas");
 const botonMenos = document.getElementById("botonMenos");
@@ -40,32 +51,66 @@ const contador = document.getElementById("contador");
 
 let valor = 0;
 
+
+function actualizarContador() {
+  contador.textContent = valor;
+
+  if (valor > 0) {
+    contador.style.color = "green";   
+  } else if (valor < 0) {
+    contador.style.color = "red";     
+  } else {
+    contador.style.color = "black";  
+}
+
+}
+
 botonMas.addEventListener("click", () => {
   valor++;
-  contador.textContent = valor;
+  actualizarContador();
 });
 
 botonMenos.addEventListener("click", () => {
   valor--;
-  contador.textContent = valor;
+  actualizarContador();
 });
 
 borrar.addEventListener("click", () => {
   valor = 0;
-  contador.textContent = valor;
+  actualizarContador();
 });
+
+
+actualizarContador();
+
 
 
 /* ejercicio 3 */
 
 
 const productos = [
-  { nombre: "Camiseta", precio: 20 },
-  { nombre: "Pantalón", precio: 35 },
-  { nombre: "Zapatos", precio: 50 },
-  { nombre: "Gorra", precio: 15 },
-  { nombre: "Bufanda", precio: 10 }
+  {
+    nombre: "Camisa",
+    precio: 25,
+    imagen: "assets/Camisa.png"
+  },
+  {
+    nombre: "Blusa",
+    precio: 30,
+    imagen: "assets/Blusa.png"
+  },
+  {
+    nombre: "Vestido",
+    precio: 50,
+    imagen: "assets/vestido.png"
+  },
+  {
+    nombre: "Chaqueta",
+    precio: 45,
+    imagen: "assets/Chaqueta.png"
+  }
 ];
+
 
 
 const input2 = document.getElementById("input2");
@@ -93,12 +138,14 @@ function mostrarProductos(lista) {
     tarjeta.classList.add("producto"); 
 
     
-    
-    tarjeta.innerHTML = `
-      <h4>${p.nombre}</h4>
-      <p>Precio: $${p.precio}</p>
-      <button>Agregar</button>
-    `;
+      
+      tarjeta.innerHTML = `
+    <img src="${p.imagen}" alt="${p.nombre}">
+    <h4>${p.nombre}</h4>
+    <p>Precio: $${p.precio}</p>
+    <button>Agregar</button>
+  `;
+
 
     
     const botonAgregar = tarjeta.querySelector("button");
@@ -124,3 +171,4 @@ input2.addEventListener("input", () => {
   mostrarProductos(filtrados);
 });
 
+  

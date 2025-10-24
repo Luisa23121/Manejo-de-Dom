@@ -24,7 +24,10 @@ section {
     background-color: #A7C7E7;
 }
 
-
+.completada {
+  text-decoration: line-through; /* pone la línea sobre el texto */
+  opacity: 0.7; /* la hace un poquito más clarita */
+}
 
 #input1 {
     padding: 8px;
@@ -137,4 +140,12 @@ section {
   font-size: 14px;
   margin-top: 8px;
 }
+
+.producto img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
 
